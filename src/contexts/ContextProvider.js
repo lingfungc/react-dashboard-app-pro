@@ -18,7 +18,7 @@ export const ContextProvider = ({ children }) => {
 
   return (
     // Every children inside ContextProvider can access the value of activeMenu from StateContext
-    <StateContext.Provider value={{ activeMenu }}>
+    <StateContext.Provider value={{ activeMenu, setActiveMenu }}>
       {/* <StateContext.Provider value={{ activeMenu: activeMenu }}> */}
       {children}
     </StateContext.Provider>

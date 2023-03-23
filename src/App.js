@@ -30,6 +30,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
 
 const App = () => {
+  // This useStateContext() is actually useContext(StateContext)
   // We want to get value of { activeMenu } from useContext(StateContext)
   // We need to know that the value of { activeMenu } in StateContext is set by ContextProvider
   // The value of { activeMenu } in StateContext from ContextProvider is only allowed inside ContextProvider's children which is <App />
