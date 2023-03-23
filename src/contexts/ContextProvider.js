@@ -1,5 +1,7 @@
+// We can pass down data with Context API without passing data with (props)
 import React, { createContext, useContext, useState } from "react";
 
+// Create a StateContext object with empty data at first
 const StateContext = createContext();
 
 // Make sure these section are closed at initial stage
@@ -10,11 +12,12 @@ const initialState = {
   notification: false,
 };
 
+// We export ContextProvider to pass StateContext as a data object to our React components
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
 
   return (
-    // We can pass down data with Context API without passing data with (props)
+    // Every children inside ContextProvider can access the value of activeMenu from StateContext
     <StateContext.Provider value={{ activeMenu }}>
       {/* <StateContext.Provider value={{ activeMenu: activeMenu }}> */}
       {children}
@@ -22,4 +25,5 @@ export const ContextProvider = ({ children }) => {
   );
 };
 
+// We export useStateContext() to pass the data from StateContext
 export const useStateContext = () => useContext(StateContext);
