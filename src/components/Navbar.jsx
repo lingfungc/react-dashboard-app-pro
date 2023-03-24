@@ -31,8 +31,39 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick } =
-    useStateContext();
+  const {
+    activeMenu,
+    setActiveMenu,
+    isClicked,
+    setIsClicked,
+    handleClick,
+    screenSize,
+    setScreenSize,
+  } = useStateContext();
+
+  // The second argument [] is about when do we want to call this useEffect()
+  // For empty [] this means only calling this useEffect() at the start
+  // This window eventListener is running when this Navbar component is present from the screen
+  // This window eventListen will be removed after the Navbar component has been removed from the screen
+  // ? What is the logic for this useEffect() ...
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+
+    // Whenever the window resize, we will use handleResize yo update the state for screenSize
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
 
   return (
     <div id="navbtn" className="flex justify-between p-2 md:mx-6 relative">
