@@ -14,7 +14,7 @@ const initialState = {
 
 // We export ContextProvider to pass StateContext as a data object to our React components
 export const ContextProvider = ({ children }) => {
-  const [activeMenu, setActiveMenu] = useState(true);
+  const [activeMenu, setActiveMenu] = useState(false);
 
   return (
     // Every children inside ContextProvider can access the value of activeMenu from StateContext
