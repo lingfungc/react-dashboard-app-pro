@@ -3085,6 +3085,7 @@ export const stackedPrimaryXAxis = {
   lineStyle: { width: 0 },
   labelIntersectAction: "Rotate45",
   valueType: "Category",
+  labelStyle: { fontFamily: "Archivo" },
 };
 
 export const stackedPrimaryYAxis = {
@@ -3097,6 +3098,7 @@ export const stackedPrimaryYAxis = {
   minorGridLines: { width: 1 },
   minorTickLines: { width: 0 },
   labelFormat: "{value}",
+  labelStyle: { fontFamily: "Archivo" },
 };
 
 export const kanbanData = [

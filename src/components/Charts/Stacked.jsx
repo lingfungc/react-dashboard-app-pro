@@ -20,12 +20,12 @@ import {
 const Stacked = ({ width, height }) => {
   const legendSettings = {
     visible: true,
-    position: "Top",
     background: "white",
     textStyle: { fontFamily: "Archivo" },
   };
 
   return (
+    // ? How to change the font family and add margin between items ...
     <ChartComponent
       width={width}
       height={height}
@@ -33,7 +33,7 @@ const Stacked = ({ width, height }) => {
       primaryXAxis={stackedPrimaryXAxis}
       primaryYAxis={stackedPrimaryYAxis}
       chartArea={{ border: { width: 0 } }}
-      tooltip={{ enable: true }}
+      tooltip={{ enable: true, textStyle: { fontFamily: "Archivo" } }}
       legendSettings={legendSettings}
     >
       <Inject services={[StackingColumnSeries, Category, Legend, Tooltip]} />
