@@ -187,17 +187,20 @@ export const areaPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelStyle: { color: "gray" },
 };
+
 export const barPrimaryXAxis = {
   valueType: "Category",
   interval: 1,
   majorGridLines: { width: 0 },
 };
+
 export const barPrimaryYAxis = {
   majorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   lineStyle: { width: 0 },
   labelStyle: { color: "transparent" },
 };
+
 const areaChartData = [
   [
     { x: new Date(2002, 0, 1), y: 2.2 },
