@@ -97,6 +97,7 @@ const gridEmployeeCountry = (props) => (
     <span>{props.Country}</span>
   </div>
 );
+
 export const EditorData = () => (
   <div>
     <h3>
@@ -143,6 +144,7 @@ export const EditorData = () => (
     </h3>
   </div>
 );
+
 const customerGridImage = (props) => (
   <div className="image flex gap-4">
     <img
@@ -166,6 +168,7 @@ const customerGridStatus = (props) => (
     <p>{props.Status}</p>
   </div>
 );
+
 export const areaPrimaryXAxis = {
   valueType: "DateTime",
   labelFormat: "y",
@@ -961,13 +964,11 @@ export const customersData = [
   },
   {
     CustomerID: 1002,
-
     CustomerName: "Sunil Joshi",
     CustomerEmail: "sunil@gmail.com",
     ProjectName: "Elite Admin",
     Status: "Active",
     CustomerImage: avatar3,
-
     StatusBg: "#8BE78B",
     Weeks: "11",
     Budget: "$3.9k",
@@ -975,7 +976,6 @@ export const customersData = [
   },
   {
     CustomerID: 1003,
-
     CustomerName: "Andrew McDownland",
     CustomerEmail: "andrew@gmail.com",
     ProjectName: "Real Homes WP Theme",
@@ -988,7 +988,6 @@ export const customersData = [
   },
   {
     CustomerID: 1004,
-
     CustomerName: "Christopher Jamil",
     CustomerEmail: "jamil@gmail.com",
     ProjectName: "MedicalPro WP Theme",
@@ -1001,7 +1000,6 @@ export const customersData = [
   },
   {
     CustomerID: 1005,
-
     CustomerName: "Michael",
     CustomerEmail: "michael@gmail.com",
     ProjectName: "Weekly WP Theme",
@@ -1026,13 +1024,11 @@ export const customersData = [
   },
   {
     CustomerID: 1007,
-
     CustomerName: "Sunil Joshi",
     CustomerEmail: "sunil@gmail.com",
     ProjectName: "Elite Admin",
     Status: "Active",
     CustomerImage: avatar3,
-
     StatusBg: "#8BE78B",
     Weeks: "11",
     Budget: "$3.9k",
@@ -1040,7 +1036,6 @@ export const customersData = [
   },
   {
     CustomerID: 1008,
-
     CustomerName: "Andrew McDownland",
     CustomerEmail: "andrew@gmail.com",
     ProjectName: "Real Homes WP Theme",
@@ -1053,7 +1048,6 @@ export const customersData = [
   },
   {
     CustomerID: 1009,
-
     CustomerName: "Christopher Jamil",
     CustomerEmail: "jamil@gmail.com",
     ProjectName: "MedicalPro WP Theme",
