@@ -7,6 +7,7 @@ import {
   AiOutlineBarChart,
   AiOutlineStock,
 } from "react-icons/ai";
+
 import {
   FiShoppingBag,
   FiEdit,
@@ -16,6 +17,7 @@ import {
   FiStar,
   FiShoppingCart,
 } from "react-icons/fi";
+
 import {
   BsKanban,
   BsBarChart,
@@ -24,6 +26,7 @@ import {
   BsShield,
   BsChatLeft,
 } from "react-icons/bs";
+
 import { BiColorFill } from "react-icons/bi";
 import { IoMdContacts } from "react-icons/io";
 import { RiContactsLine, RiStockLine } from "react-icons/ri";
@@ -561,7 +564,7 @@ export const links = [
         icon: <FiEdit />,
       },
       {
-        name: "color-picker",
+        name: "color picker",
         icon: <BiColorFill />,
       },
     ],
@@ -591,7 +594,7 @@ export const links = [
         icon: <RiStockLine />,
       },
       {
-        name: "color-mapping",
+        name: "color mapping",
         icon: <BsBarChart />,
       },
       {
