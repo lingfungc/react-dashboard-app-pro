@@ -91,6 +91,8 @@ const App = () => {
             </div>
 
             <div>
+              <ThemeSettings />
+
               {/* This is to set routes for the application */}
               <Routes>
                 {/* Dashboard */}
