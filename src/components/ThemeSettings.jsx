@@ -9,6 +9,9 @@ import { useStateContext } from "../contexts/ContextProvider";
 import Button from "./Button";
 
 const ThemeSettings = () => {
+  const { setColor, setMode, currentMode, currentColor, setThemeSettings } =
+    useStateContext;
+
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
       <div
@@ -70,10 +73,15 @@ const ThemeSettings = () => {
                 position="TopCenter"
               >
                 <div className="relative mt-2 cursor-pointer flex gap-5 items-center">
-                  <button>
+                  <button
+                    type="button"
+                    className="h-10 w-10 rounded-full cursor-pointer"
+                    style={{ backgroundColor: item.color }}
+                    onClick={() => {}}
+                  >
                     <BsCheck
                       className={`ml-2 text-xl text-white ${
-                        true ? "block" : "hidden"
+                        false ? "block" : "hidden"
                       }`}
                     />
                     {/* <BsCheck
