@@ -34,7 +34,8 @@ const App = () => {
   // We want to get value of { activeMenu } from useContext(StateContext)
   // We need to know that the value of { activeMenu } in StateContext is set by ContextProvider
   // The value of { activeMenu } in StateContext from ContextProvider is only allowed inside ContextProvider's children which is <App />
-  const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings, currentColor } =
+    useStateContext();
 
   return (
     <div>
@@ -50,7 +51,7 @@ const App = () => {
                 type="button"
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 // We use in-line style here because we want it to be dynamic which means user can change color scheme
-                style={{ background: "blue", borderRadius: "50%" }}
+                style={{ background: `${currentColor}`, borderRadius: "50%" }}
                 onClick={() => setThemeSettings(true)}
               >
                 <FiSettings />
