@@ -411,6 +411,7 @@ export const LinePrimaryXAxis = {
   edgeLabelPlacement: "Shift",
   majorGridLines: { width: 0 },
   background: "white",
+  labelStyle: { fontFamily: "Archivo" },
 };
 
 export const LinePrimaryYAxis = {
@@ -422,6 +423,7 @@ export const LinePrimaryYAxis = {
   lineStyle: { width: 0 },
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
+  labelStyle: { fontFamily: "Archivo" },
 };
 
 export const customersGrid = [
