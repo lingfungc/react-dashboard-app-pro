@@ -178,7 +178,7 @@ export const AreaPrimaryXAxis = {
   majorGridLines: { width: 0 },
   intervalType: "Years",
   edgeLabelPlacement: "Shift",
-  labelStyle: { color: "gray" },
+  labelStyle: { fontFamily: "Archivo", color: "gray" },
 };
 
 export const AreaPrimaryYAxis = {
@@ -188,20 +188,21 @@ export const AreaPrimaryYAxis = {
   interval: 1,
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
-  labelStyle: { color: "gray" },
+  labelStyle: { fontFamily: "Archivo", color: "gray" },
 };
 
 export const barPrimaryXAxis = {
   valueType: "Category",
   interval: 1,
   majorGridLines: { width: 0 },
+  labelStyle: { fontFamily: "Archivo" },
 };
 
 export const barPrimaryYAxis = {
   majorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   lineStyle: { width: 0 },
-  labelStyle: { color: "transparent" },
+  labelStyle: { fontFamily: "Archivo", color: "transparent" },
 };
 
 const areaChartData = [
@@ -302,7 +303,7 @@ export const barCustomSeries = [
       dataLabel: {
         visible: true,
         position: "Top",
-        font: { fontWeight: "600", color: "#ffffff" },
+        font: { fontFamily: "Archivo", fontWeight: "600", color: "#ffffff" },
       },
     },
   },
@@ -316,7 +317,7 @@ export const barCustomSeries = [
       dataLabel: {
         visible: true,
         position: "Top",
-        font: { fontWeight: "600", color: "#ffffff" },
+        font: { fontFamily: "Archivo", fontWeight: "600", color: "#ffffff" },
       },
     },
   },
@@ -330,11 +331,12 @@ export const barCustomSeries = [
       dataLabel: {
         visible: true,
         position: "Top",
-        font: { fontWeight: "600", color: "#ffffff" },
+        font: { fontFamily: "Archivo", fontWeight: "600", color: "#ffffff" },
       },
     },
   },
 ];
+
 export const colorMappingData = [
   [
     { x: "Jan", y: 6.96 },
@@ -377,6 +379,7 @@ export const ColorMappingPrimaryXAxis = {
   valueType: "Category",
   majorGridLines: { width: 0 },
   title: "Months",
+  labelStyle: { fontFamily: "Archivo" },
 };
 
 export const ColorMappingPrimaryYAxis = {
@@ -385,6 +388,7 @@ export const ColorMappingPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelFormat: "{value}°C",
   title: "Temperature",
+  labelStyle: { fontFamily: "Archivo" },
 };
 
 export const FinancialPrimaryXAxis = {
@@ -393,6 +397,7 @@ export const FinancialPrimaryXAxis = {
   maximum: new Date("2017, 9, 30"),
   crosshairTooltip: { enable: true },
   majorGridLines: { width: 0 },
+  labelStyle: { fontFamily: "Archivo" },
 };
 
 export const FinancialPrimaryYAxis = {
@@ -402,6 +407,7 @@ export const FinancialPrimaryYAxis = {
   interval: 20,
   lineStyle: { width: 0 },
   majorTickLines: { width: 0 },
+  labelStyle: { fontFamily: "Archivo" },
 };
 
 export const LinePrimaryXAxis = {
