@@ -34,11 +34,16 @@ const App = () => {
   // We want to get value of { activeMenu } from useContext(StateContext)
   // We need to know that the value of { activeMenu } in StateContext is set by ContextProvider
   // The value of { activeMenu } in StateContext from ContextProvider is only allowed inside ContextProvider's children which is <App />
-  const { activeMenu, themeSettings, setThemeSettings, currentColor } =
-    useStateContext();
+  const {
+    activeMenu,
+    themeSettings,
+    setThemeSettings,
+    currentColor,
+    currentMode,
+  } = useStateContext();
 
   return (
-    <div>
+    <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <div id="dashboard" className="flex relative dark:bg-main-dark-bg">
           <div
@@ -74,9 +79,8 @@ const App = () => {
 
           <div
             id="dashboard-content"
-            className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
-              activeMenu ? "md:ml-72" : "flex-2"
-            }`}
+            className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full
+            ${activeMenu ? "md:ml-72" : "flex-2"}`}
           >
             {/* <div
             className={
