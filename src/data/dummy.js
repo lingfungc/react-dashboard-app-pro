@@ -379,6 +379,7 @@ export const ColorMappingPrimaryXAxis = {
   valueType: "Category",
   majorGridLines: { width: 0 },
   title: "Months",
+  titleStyle: { fontFamily: "Archivo" },
   labelStyle: { fontFamily: "Archivo" },
 };
 
@@ -388,6 +389,7 @@ export const ColorMappingPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelFormat: "{value}°C",
   title: "Temperature",
+  titleStyle: { fontFamily: "Archivo" },
   labelStyle: { fontFamily: "Archivo" },
 };
 
@@ -403,9 +405,10 @@ export const FinancialPrimaryXAxis = {
 export const FinancialPrimaryYAxis = {
   // title: {
   //   text: "Price",
-  //   font: { fontFamily: "Archivo" },
+  //   font: "Archivo",
   // },
   title: "Price",
+  titleStyle: { fontFamily: "Archivo" },
   minimum: 100,
   maximum: 180,
   interval: 20,

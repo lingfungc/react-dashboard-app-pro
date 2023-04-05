@@ -44,8 +44,6 @@ const Financial = () => {
     textStyle: { fontFamily: "Archivo" },
   };
 
-  // ! Need to update the font-family for all text
-
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
       <Header category="Financial" title="AAPLE Historical" />
@@ -62,7 +60,11 @@ const Financial = () => {
             textStyle: { fontFamily: "Archivo" },
           }}
           legendSettings={legendSettings}
-          crosshair={{ enable: true, lineType: "Vertical", line: { width: 0 } }}
+          // crosshair={{
+          //   enable: true,
+          //   lineType: "Vertical",
+          //   line: { width: 0 },
+          // }}
           background={currentMode === "Dark" ? "#33373E" : "#fff"}
         >
           <Inject

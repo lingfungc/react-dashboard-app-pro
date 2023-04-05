@@ -24,8 +24,6 @@ import { useStateContext } from "../../contexts/ContextProvider";
 const ColorMapping = () => {
   const { currentMode } = useStateContext();
 
-  // ! Need to update the font-family for all text
-
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
       <Header
