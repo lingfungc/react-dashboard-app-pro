@@ -401,6 +401,10 @@ export const FinancialPrimaryXAxis = {
 };
 
 export const FinancialPrimaryYAxis = {
+  // title: {
+  //   text: "Price",
+  //   font: { fontFamily: "Archivo" },
+  // },
   title: "Price",
   minimum: 100,
   maximum: 180,
