@@ -172,7 +172,7 @@ const customerGridStatus = (props) => (
   </div>
 );
 
-export const areaPrimaryXAxis = {
+export const AreaPrimaryXAxis = {
   valueType: "DateTime",
   labelFormat: "y",
   majorGridLines: { width: 0 },
@@ -181,7 +181,7 @@ export const areaPrimaryXAxis = {
   labelStyle: { color: "gray" },
 };
 
-export const areaPrimaryYAxis = {
+export const AreaPrimaryYAxis = {
   labelFormat: "{value}%",
   lineStyle: { width: 0 },
   maximum: 4,
