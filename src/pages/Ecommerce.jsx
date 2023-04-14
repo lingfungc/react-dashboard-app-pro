@@ -7,7 +7,7 @@ import { Stacked, Pie, Button, SparkLine } from "../components";
 import {
   earningData,
   SparklineAreaData,
-  ecomPieChartData,
+  econPieChartData,
 } from "../data/dummy";
 
 import { useStateContext } from "../contexts/ContextProvider";

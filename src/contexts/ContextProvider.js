@@ -42,6 +42,10 @@ export const ContextProvider = ({ children }) => {
     setIsClicked({ ...initialState, [navItem]: true });
   };
 
+  const handleClickClose = (navItem) => {
+    setIsClicked({ ...initialState, [navItem]: false });
+  };
+
   return (
     // Every children inside ContextProvider can access the value of activeMenu from StateContext
     <StateContext.Provider
@@ -51,6 +55,7 @@ export const ContextProvider = ({ children }) => {
         isClicked,
         setIsClicked,
         handleClick,
+        handleClickClose,
         screenSize,
         setScreenSize,
         currentColor,

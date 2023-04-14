@@ -7,7 +7,13 @@ import { cartData } from "../data/dummy";
 import { Button } from ".";
 
 const Cart = () => {
-  const { currentColor } = useStateContext;
+  const {
+    currentColor,
+    handleClick,
+    handleClickClose,
+    isClicked,
+    setIsClicked,
+  } = useStateContext();
 
   return (
     <div
@@ -17,13 +23,14 @@ const Cart = () => {
       <div className="float-right h-screen duration-1000 ease-in-out dark:text-gray-200 transition-all dark:bg-[#484852] bg-white md:w-400 p-8">
         <div className="flex justify-between items-center">
           <p className="font-semibold text-lg">Shopping Cart</p>
-          <Button
-            icon={<MdOutlineCancel />}
-            color="rgb(153, 171, 180)"
-            bgHOverColor="light-gray"
-            size="2xl"
-            borderRadius="50%"
-          />
+          <button
+            type="button"
+            style={{ color: "rgb(153,171,180)", borderRadius: "50%" }}
+            className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
+            onClick={() => handleClickClose("chat")}
+          >
+            <MdOutlineCancel />
+          </button>
         </div>
 
         {/* Items List */}
@@ -61,8 +68,8 @@ const Cart = () => {
           </div>
         ))}
 
-        <div className="mt-3 mb-3">
-          <div className="flex justify-between items-center">
+        <div className="mt-5 mb-5">
+          <div className="flex justify-between items-center mb-2">
             <p className="text-gray-500 dark:text-gray-200">Sub Total</p>
             <p className="font-semibold">$890</p>
           </div>
