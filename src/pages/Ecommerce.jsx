@@ -17,8 +17,14 @@ const Ecommerce = () => {
 
   return (
     <div id="ecommerce" className="mt-12">
-      <div className="flex flex-wrap lg:flex-nowrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
+      <div
+        id="earnings"
+        className="flex flex-wrap lg:flex-nowrap justify-center"
+      >
+        <div
+          id="earnings-banner"
+          className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center "
+        >
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
@@ -35,11 +41,15 @@ const Ecommerce = () => {
             />
           </div>
         </div>
-        <div className="flex flex-wrap m-3 justify-center gap-1 items-center">
+
+        <div
+          id="earnings-categories"
+          className="flex flex-wrap m-3 justify-center gap-1 items-center"
+        >
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
+              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl w-40"
             >
               <button
                 type="button"
