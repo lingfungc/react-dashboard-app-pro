@@ -80,13 +80,18 @@ const Cart = () => {
         </div>
 
         <div className="mt-5">
-          <Button
-            color="white"
-            bgColor={currentColor}
-            text="Place Order"
-            borderRadius="10px"
-            width="full"
-          />
+          <button
+            type="button"
+            style={{
+              backgroundColor: currentColor,
+              color: "white",
+              borderRadius: "10px",
+            }}
+            className={`p-3 hover:drop-shadow-xl hover:bg-light-gray w-full`}
+            onClick={() => handleClickClose("chat")}
+          >
+            Place Order
+          </button>
         </div>
       </div>
     </div>
