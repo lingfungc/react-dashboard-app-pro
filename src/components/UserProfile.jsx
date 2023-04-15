@@ -7,7 +7,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 import avatar from "../data/avatar.jpg";
 
 const UserProfile = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, handleClickClose } = useStateContext();
 
   return (
     <div
@@ -22,6 +22,7 @@ const UserProfile = () => {
           bgHoverColor="light-gray"
           size="2xl"
           borderRadius="50%"
+          customFunc={() => handleClickClose("userProfile")}
         />
       </div>
 
