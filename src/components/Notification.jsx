@@ -6,7 +6,7 @@ import { chatData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Notification = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, handleClickClose } = useStateContext();
 
   return (
     <div
@@ -32,6 +32,7 @@ const Notification = () => {
           bgHoverColor="light-gray"
           size="2xl"
           borderRadius="50%"
+          customFunc={() => handleClickClose("notification")}
         />
       </div>
 
@@ -62,6 +63,7 @@ const Notification = () => {
             bgColor={currentColor}
             borderRadius="10px"
             width="full"
+            customFunc={() => handleClickClose("notification")}
           />
         </div>
       </div>
