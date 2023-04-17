@@ -71,6 +71,17 @@ const UserProfile = () => {
           </div>
         ))}
       </div>
+
+      <div className="mt-5">
+        <Button
+          color="white"
+          bgColor={currentColor}
+          borderRadius="10px"
+          width="full"
+          text="Logout"
+          customFunc={() => handleClickClose("userProfile")}
+        />
+      </div>
     </div>
   );
 };
