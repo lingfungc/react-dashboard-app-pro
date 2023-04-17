@@ -17,12 +17,22 @@ import {
   stackedPrimaryYAxis,
 } from "../../data/dummy";
 
+import { useStateContext } from "../../contexts/ContextProvider";
+
 const Stacked = ({ width, height }) => {
-  const legendSettings = {
-    visible: true,
-    background: "white",
-    textStyle: { fontFamily: "Archivo" },
+  const { currentMode } = useStateContext();
+
+  const getLegendSettings = (currentMode) => {
+    return currentMode === "Dark"
+      ? {
+          visible: true,
+          background: "#33373E",
+          textStyle: { fontFamily: "Archivo", color: "rgb(156,163,175)" },
+        }
+      : { visible: true, textStyle: { fontFamily: "Archivo" } };
   };
+
+  const legendSettings = getLegendSettings(currentMode);
 
   return (
     // ? How to change the font family and add margin between items ...
@@ -35,6 +45,7 @@ const Stacked = ({ width, height }) => {
       chartArea={{ border: { width: 0 } }}
       tooltip={{ enable: true, textStyle: { fontFamily: "Archivo" } }}
       legendSettings={legendSettings}
+      background={currentMode === "Dark" ? "#33373E" : "#fff"}
     >
       <Inject services={[StackingColumnSeries, Category, Legend, Tooltip]} />
       <SeriesCollectionDirective>

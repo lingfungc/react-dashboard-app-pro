@@ -389,7 +389,7 @@ export const ColorMappingPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelFormat: "{value}°C",
   title: "Temperature",
-  titleStyle: { fontFamily: "Archivo" },
+  titleStyle: { fontFamily: "Archivo", color: "rgb(156,163,175)" },
   labelStyle: { fontFamily: "Archivo" },
 };
 
@@ -408,7 +408,7 @@ export const FinancialPrimaryYAxis = {
   //   font: "Archivo",
   // },
   title: "Price",
-  titleStyle: { fontFamily: "Archivo" },
+  titleStyle: { fontFamily: "Archivo", color: "rgb(156,163,175)" },
   minimum: 100,
   maximum: 180,
   interval: 20,

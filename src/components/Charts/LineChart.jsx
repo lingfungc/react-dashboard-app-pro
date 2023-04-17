@@ -22,11 +22,16 @@ import { useStateContext } from "../../contexts/ContextProvider";
 const LineChart = () => {
   const { currentMode } = useStateContext();
 
-  const legendSettings = {
-    visible: true,
-    // background: "white",
-    textStyle: { fontFamily: "Archivo" },
+  const getLegendSettings = (currentMode) => {
+    return currentMode === "Dark"
+      ? {
+          visible: true,
+          textStyle: { fontFamily: "Archivo", color: "rgb(156,163,175)" },
+        }
+      : { visible: true, textStyle: { fontFamily: "Archivo" } };
   };
+
+  const legendSettings = getLegendSettings(currentMode);
 
   return (
     <ChartComponent

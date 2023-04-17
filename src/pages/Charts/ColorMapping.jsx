@@ -24,6 +24,18 @@ import { useStateContext } from "../../contexts/ContextProvider";
 const ColorMapping = () => {
   const { currentMode } = useStateContext();
 
+  const getLegendSettings = (currentMode) => {
+    return currentMode === "Dark"
+      ? {
+          mode: "Range",
+          background: "#33373E",
+          textStyle: { fontFamily: "Archivo", color: "rgb(156,163,175)" },
+        }
+      : { mode: "Range", textStyle: { fontFamily: "Archivo" } };
+  };
+
+  const legendSettings = getLegendSettings(currentMode);
+
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
       <Header
@@ -37,11 +49,7 @@ const ColorMapping = () => {
           primaryXAxis={ColorMappingPrimaryXAxis}
           primaryYAxis={ColorMappingPrimaryYAxis}
           chartArea={{ border: { width: 0 } }}
-          legendSettings={{
-            mode: "Range",
-            background: "white",
-            textStyle: { fontFamily: "Archivo" },
-          }}
+          legendSettings={legendSettings}
           tooltip={{ enable: true, textStyle: { fontFamily: "Archivo" } }}
           background={currentMode === "Dark" ? "#33373E" : "#fff"}
         >

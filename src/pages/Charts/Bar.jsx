@@ -25,11 +25,16 @@ import { useStateContext } from "../../contexts/ContextProvider";
 const Bar = () => {
   const { currentMode } = useStateContext();
 
-  const legendSettings = {
-    visible: true,
-    // background: "white",
-    textStyle: { fontFamily: "Archivo" },
+  const getLegendSettings = (currentMode) => {
+    return currentMode === "Dark"
+      ? {
+          visible: true,
+          textStyle: { fontFamily: "Archivo", color: "rgb(156,163,175)" },
+        }
+      : { visible: true, textStyle: { fontFamily: "Archivo" } };
   };
+
+  const legendSettings = getLegendSettings(currentMode);
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">

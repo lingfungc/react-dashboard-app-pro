@@ -16,14 +16,22 @@ import { useStateContext } from "../../contexts/ContextProvider";
 const PieChart = ({ id, data, legendVisiblity, height }) => {
   const { currentMode } = useStateContext();
 
+  const getLegendSettings = (currentMode) => {
+    return currentMode === "Dark"
+      ? {
+          visible: legendVisiblity,
+          background: "#33373E",
+          textStyle: { fontFamily: "Archivo", color: "rgb(156,163,175)" },
+        }
+      : { visible: legendVisiblity, textStyle: { fontFamily: "Archivo" } };
+  };
+
+  const legendSettings = getLegendSettings(currentMode);
+
   return (
     <AccumulationChartComponent
       id={id}
-      legendSettings={{
-        visible: legendVisiblity,
-        background: "white",
-        textStyle: { fontFamily: "Archivo" },
-      }}
+      legendSettings={legendSettings}
       height={height}
       background={currentMode === "Dark" ? "#33373E" : "#fff"}
       tooltip={{ enable: true, textStyle: { fontFamily: "Archivo" } }}
