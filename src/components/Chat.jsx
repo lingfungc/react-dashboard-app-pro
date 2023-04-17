@@ -15,7 +15,10 @@ const Chat = () => {
       <div className="flex justify-between items-center">
         <div className="flex gap-3">
           <p className="font-semibold text-lg dark:text-gray-200">Messages</p>
-          <button type="button" className="text-xs p-1 px-2 bg-orange">
+          <button
+            type="button"
+            className="text-xs text-gray-600 dark:text-gray-400 p-1 px-2 bg-orange"
+          >
             5 New
           </button>
         </div>
