@@ -22,22 +22,14 @@ export const ContextProvider = ({ children }) => {
   const [currentMode, setCurrentMode] = useState("Light");
   const [themeSettings, setThemeSettings] = useState(false);
 
+  const [gridTableColor, setGridTableColor] = useState("white");
+
   const setMode = (e) => {
     // console.log(e.target.value);
 
     setCurrentMode(e.target.value);
     localStorage.setItem("themeMode", e.target.value);
     setThemeSettings(false);
-
-    const grid = document.querySelector("#grid-comp_content_table");
-    console.log(grid);
-    grid.classList.toggle("dark-mode-table");
-
-    const rows = document.querySelectorAll(".e-rowcell");
-    console.log(rows);
-    rows.forEach((row) => {
-      row.classList.toggle("dark-mode-row");
-    });
   };
 
   const setColor = (color) => {

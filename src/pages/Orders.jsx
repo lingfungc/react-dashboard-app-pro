@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, React } from "react";
 
 import {
   GridComponent,
@@ -18,7 +18,23 @@ import {
 import { ordersData, contextMenuItems, ordersGrid } from "../data/dummy";
 import { Header } from "../components";
 
+import { useStateContext } from "../contexts/ContextProvider";
+
 const Orders = () => {
+  const { currentMode } = useStateContext();
+
+  useEffect(() => {
+    const gridTable = document.getElementById("grid-comp_content_table");
+
+    if (currentMode === "Light") {
+      gridTable.style.backgroundColor = "white";
+      gridTable.style.color = "black";
+    } else {
+      gridTable.style.backgroundColor = "rgb(51 55 62)";
+      gridTable.style.color = "white";
+    }
+  });
+
   return (
     <div
       id="orders-grid"

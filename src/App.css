@@ -9,7 +9,7 @@
   z-index: 10000;
 }
 
-@media  screen and (max-width:800px) {
+@media screen and (max-width:800px) {
   .sidebar {
     z-index: 10000000;
   }
@@ -60,10 +60,6 @@
 }
 
 /* Orders Grid - Table Color in Dark Mode */
-.dark-mode-table {
-  background-color: rgb(51 55 62) !important;
-}
-
-.dark-mode-row {
-  color: white !important;
+.e-grid .e-rowcell:not(.e-editedbatchcell):not(.e-updatedtd), .e-grid .e-detailrowcollapse:not(.e-editedbatchcell):not(.e-updatedtd), .e-grid .e-detailrowexpand:not(.e-editedbatchcell):not(.e-updatedtd), .e-grid .e-gridcontent .e-rowdragdrop:not(.e-editedbatchcell):not(.e-updatedtd), .e-grid .e-gridheader .e-rowdragdrop:not(.e-editedbatchcell):not(.e-updatedtd), .e-grid .e-emptyrow:not(.e-editedbatchcell):not(.e-updatedtd) {
+  color: inherit;
 }
