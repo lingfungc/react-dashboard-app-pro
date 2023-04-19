@@ -8,8 +8,14 @@ import { useStateContext } from "../contexts/ContextProvider";
 
 // * Change the color of the pen accordingly
 const change = (args) => {
-  document.getElementById("preview").style.backgroundColor =
-    args.currentValue.hex;
+  const previewPenLight = document.getElementById("preview-light");
+  const previewPenDark = document.getElementById("preview-dark");
+
+  if (previewPenLight) {
+    previewPenLight.style.backgroundColor = args.currentValue.hex;
+  } else {
+    previewPenDark.style.backgroundColor = args.currentValue.hex;
+  }
 };
 
 const ColorPicker = () => {
@@ -22,7 +28,10 @@ const ColorPicker = () => {
     >
       <Header category="App" title="Color Picker" />
       <div className="text-center">
-        <div id={currentMode === "Light" ? "preview-light" : "preview-dark"} />
+        <div
+          id={currentMode === "Light" ? "preview-light" : "preview-dark"}
+          className="preview-pen"
+        />
 
         <div className="flex justify-center items-center gap-20 flex-wrap">
           <div>
