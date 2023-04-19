@@ -19,7 +19,7 @@ const Ecommerce = () => {
     <div id="ecommerce" className="mt-12">
       <div
         id="earnings"
-        className="flex flex-wrap lg:flex-nowrap justify-center"
+        className="flex flex-wrap lg:flex-nowrap lg:w-11/12 lg:mx-auto justify-center"
       >
         <div
           id="earnings-banner"
