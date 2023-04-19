@@ -21,22 +21,22 @@ const Employees = () => {
 
   useEffect(() => {
     const gridTable = document.getElementById("grid-comp_content_table");
-    const svgPathElements = document.querySelectorAll(".e-row svg path");
+    // const svgPathElements = document.querySelectorAll(".e-row svg path");
 
     if (currentMode === "Light") {
       gridTable.style.backgroundColor = "white";
       gridTable.style.color = "black";
 
-      svgPathElements.forEach((e) => {
-        e.setAttribute("stroke", "#000");
-      });
+      // svgPathElements.forEach((e) => {
+      //   e.setAttribute("stroke", "#000");
+      // });
     } else {
       gridTable.style.backgroundColor = "rgb(51 55 62)";
       gridTable.style.color = "white";
 
-      svgPathElements.forEach((e) => {
-        e.setAttribute("stroke", "#fff");
-      });
+      // svgPathElements.forEach((e) => {
+      //   e.setAttribute("stroke", "#fff");
+      // });
     }
   });
 
