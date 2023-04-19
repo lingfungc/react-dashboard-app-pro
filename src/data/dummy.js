@@ -163,7 +163,7 @@ const customerGridImage = (props) => (
 );
 
 const customerGridStatus = (props) => (
-  <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
+  <div className="flex gap-2 justify-center items-center capitalize">
     <p
       style={{ background: props.StatusBg }}
       className="rounded-full h-3 w-3"
