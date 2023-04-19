@@ -58,3 +58,12 @@
 #customers-grid .e-search-wrapper {
   transform: translateY(3px);
 }
+
+/* Orders Grid - Table Color in Dark Mode */
+.dark-mode-table {
+  background-color: rgb(51 55 62) !important;
+}
+
+.dark-mode-row {
+  color: white !important;
+}

@@ -22,7 +22,7 @@ const Orders = () => {
   return (
     <div
       id="orders-grid"
-      className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl"
+      className="m-2 md:m-10 p-2 md:p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl"
     >
       <Header category="Page" title="Orders" />
       <GridComponent

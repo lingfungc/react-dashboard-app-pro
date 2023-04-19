@@ -28,6 +28,16 @@ export const ContextProvider = ({ children }) => {
     setCurrentMode(e.target.value);
     localStorage.setItem("themeMode", e.target.value);
     setThemeSettings(false);
+
+    const grid = document.querySelector("#grid-comp_content_table");
+    console.log(grid);
+    grid.classList.toggle("dark-mode-table");
+
+    const rows = document.querySelectorAll(".e-rowcell");
+    console.log(rows);
+    rows.forEach((row) => {
+      row.classList.toggle("dark-mode-row");
+    });
   };
 
   const setColor = (color) => {
